@@ -2,39 +2,33 @@
 
 
 
-# [Project Name] 🎯
+# [Useless Code JUdge] 🎯
 
 
 ## Basic Details
-### Team Name: [Name]
+### Team Name: [ERROR 404]
 
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Team Lead: [Aswin D] - [College of Engineering Trikaripur]
+- Member 2: [Sooryanandhan M] - [College of Engineering Trikaripur]
 
 ### Project Description
-[2-3 lines about what your project does]
+[Our project judges you for whatver code you write.]
 
 ### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
+[we coders expecially are shy of others judging.]
 
 ### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+[Our program judges you to make you hard.]
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
-
-For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
+- [HTML,CSS,JavaScript]
+- [None]
+- [None]
+- [VS Code,Chrome,Claude ai,ChatGPT]
 
 ### Implementation
 For Software:
@@ -82,16 +76,15 @@ For Hardware:
 
 ### Project Demo
 # Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
+[https://drive.google.com/file/d/1c3XbjOTCrsxRAuLbHhxdhit-B2WfUd1v/view?usp=drivesdk]
+*Whole working of our project*
 
 # Additional Demos
 [Add any extra demo materials/links]
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- [Sooryanandhan M]: [REsource picking,Coding,DEbugging]
+- [Aswin D]: [Coding,Debugging]
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
