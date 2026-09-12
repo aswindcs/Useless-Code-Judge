@@ -1,0 +1,380 @@
+/* =====================================================
+   USELESS CODE JUDGE — style.css
+   Dark, professional developer/IDE aesthetic
+   ===================================================== */
+
+/* =====================================================
+   ROOT VARIABLES
+   ===================================================== */
+:root {
+  --bg-primary: #0d1117;
+  --bg-secondary: #10151c;
+  --bg-panel: #141a22;
+  --bg-editor: #0b1016;
+
+  --border-color: #232b36;
+  --border-color-light: #2c3644;
+
+  --text-primary: #e6edf3;
+  --text-muted: #8b96a5;
+  --text-faint: #5b6472;
+
+  --accent-green: #2ecc71;
+  --accent-green-dim: #1f8a4d;
+  --accent-blue: #4aa8ff;
+  --accent-blue-dim: #2f6fbf;
+
+  --font-mono: "SFMono-Regular", "Consolas", "Menlo", "Courier New", monospace;
+  --font-sans: "Segoe UI", "Inter", "Helvetica Neue", Arial, sans-serif;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  --shadow-soft: 0 4px 16px rgba(0, 0, 0, 0.35);
+  --shadow-strong: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* =====================================================
+   RESET & BASE
+   ===================================================== */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* Hidden attribute must always win, no matter what */
+[hidden] {
+  display: none !important;
+}
+
+/* =====================================================
+   LAYOUT / APPLICATION CONTAINER
+   ===================================================== */
+.main-content {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+.site-header {
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  padding: 36px 24px 28px;
+  text-align: center;
+}
+
+.site-title {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--text-primary);
+  text-shadow: 0 0 18px rgba(46, 204, 113, 0.15);
+}
+
+.site-title::before {
+  content: "// ";
+  color: var(--accent-green);
+}
+
+.site-subtitle {
+  margin: 10px 0 0;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+/* =====================================================
+   EDITOR SECTION
+   ===================================================== */
+.editor-section {
+  background-color: var(--bg-panel);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.code-editor {
+  width: 100%;
+  min-height: 340px;
+  background-color: var(--bg-editor);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  padding: 18px 20px;
+  border: 1px solid var(--border-color-light);
+  border-radius: var(--radius-md);
+  resize: none;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  tab-size: 4;
+}
+
+.code-editor::placeholder {
+  color: var(--text-faint);
+}
+
+.code-editor:focus {
+  border-color: var(--accent-green);
+  box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.15);
+}
+
+/* =====================================================
+   CHECK CODE BUTTON
+   ===================================================== */
+.check-button {
+  align-self: flex-end;
+  background-color: var(--accent-green);
+  color: #06120c;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 12px 28px;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 10px rgba(46, 204, 113, 0.25);
+}
+
+.check-button:hover {
+  background-color: #38d67f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(46, 204, 113, 0.35);
+}
+
+.check-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(46, 204, 113, 0.25);
+}
+
+.check-button:disabled {
+  background-color: var(--accent-green-dim);
+  color: rgba(6, 18, 12, 0.6);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+  opacity: 0.6;
+}
+
+/* =====================================================
+   LOADING SCREEN
+   ===================================================== */
+.loading-screen {
+  background-color: var(--bg-panel);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 60px 24px;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  text-align: center;
+}
+
+.spinner {
+  width: 46px;
+  height: 46px;
+  border: 3px solid var(--border-color-light);
+  border-top-color: var(--accent-blue);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-message {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.loading-message::after {
+  content: "";
+  display: inline-block;
+  width: 1ch;
+  animation: dots 1.4s steps(4, end) infinite;
+}
+
+@keyframes dots {
+  0% { content: ""; }
+  25% { content: "."; }
+  50% { content: ".."; }
+  75% { content: "..."; }
+  100% { content: ""; }
+}
+
+/* =====================================================
+   RESULT SCREEN
+   ===================================================== */
+.result-screen {
+  background-color: var(--bg-panel);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 36px 28px;
+  box-shadow: var(--shadow-strong);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.result-heading {
+  margin: 0 0 4px;
+  font-family: var(--font-mono);
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  color: var(--accent-green);
+}
+
+.verdict {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.score {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--accent-blue);
+  margin: 0 0 8px;
+  letter-spacing: 0.5px;
+}
+
+.result-video {
+  width: 100%;
+  max-width: 480px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color-light);
+  box-shadow: var(--shadow-soft);
+  background-color: #000;
+}
+
+.try-again-button {
+  margin-top: 12px;
+  background-color: transparent;
+  color: var(--accent-blue);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 11px 26px;
+  border: 1px solid var(--accent-blue-dim);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.try-again-button:hover {
+  background-color: rgba(74, 168, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.try-again-button:active {
+  transform: translateY(0);
+}
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+.site-footer {
+  text-align: center;
+  padding: 24px 16px 40px;
+  font-size: 0.8rem;
+  color: var(--text-faint);
+  font-family: var(--font-mono);
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN
+   ===================================================== */
+@media (max-width: 768px) {
+  .site-title {
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+  }
+
+  .main-content {
+    padding: 24px 16px 48px;
+    gap: 22px;
+  }
+
+  .code-editor {
+    min-height: 260px;
+    font-size: 0.88rem;
+    padding: 14px 16px;
+  }
+
+  .check-button {
+    align-self: stretch;
+    text-align: center;
+  }
+
+  .result-screen {
+    padding: 28px 18px;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-title {
+    font-size: 1.4rem;
+  }
+
+  .site-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .editor-section,
+  .loading-screen,
+  .result-screen {
+    padding: 16px;
+    border-radius: var(--radius-md);
+  }
+
+  .result-heading {
+    font-size: 1.15rem;
+  }
+}

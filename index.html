@@ -1,1 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Useless Code Judge</title>
 
+  <!-- Stylesheet (to be created later) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <h1 class="site-title">USELESS CODE JUDGE</h1>
+    <p class="site-subtitle">The world's least necessary code evaluation system.</p>
+  </header>
+
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main class="main-content">
+
+    <!-- Code Editor Section -->
+    <section class="editor-section" aria-label="Code Editor">
+      <textarea
+        id="code-editor"
+        class="code-editor"
+        placeholder="Write your code here..."
+        rows="20"
+        spellcheck="false"
+      ></textarea>
+
+      <button id="check-button" class="check-button">CHECK CODE</button>
+    </section>
+
+    <!-- Loading Section (hidden by default, controlled later by script.js) -->
+    <section id="loading-screen" class="loading-screen" hidden>
+      <div class="loading-indicator">
+        <!-- A spinner or animation can be styled here later -->
+        <div class="spinner"></div>
+        <p id="loading-message" class="loading-message">Initializing compiler...</p>
+      </div>
+    </section>
+
+    <!-- Result Section (hidden by default, controlled later by script.js) -->
+    <section id="result-screen" class="result-screen" hidden>
+      <h2 class="result-heading">CODE EVALUATION COMPLETE</h2>
+
+      <p id="verdict" class="verdict"></p>
+      <p id="score" class="score"></p>
+
+      <video
+        id="result-video"
+        class="result-video"
+        controls
+        playsinline
+      ></video>
+
+      <button id="try-again" class="try-again-button">TRY AGAIN</button>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Useless Code Judge. Judging nothing, confidently.</p>
+  </footer>
+
+  <!-- Script (to be created later) -->
+  <script src="script.js"></script>
+</body>
+</html>
