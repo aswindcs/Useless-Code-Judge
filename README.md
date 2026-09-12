@@ -42,7 +42,9 @@ For Software:
 For Software:
 
 # Screenshots (Add at least 3)
-
+![s](a.png)
+![s1](b.png)
+![s3](c.png)
 
 # Diagrams
 ![Workflow](Add your workflow/architecture diagram here)
